@@ -1,0 +1,10 @@
+/node_modules
+app/log/app.log
+/coverage/*
+/.nyc_output/*
+/.eslintrc.json
+log/access.log
+app/log/app.log
+npm-debug.log
+*.log
+/app/log/app.log
