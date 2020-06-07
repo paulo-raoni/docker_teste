@@ -4,7 +4,6 @@ WORKDIR /usr/src/app
 
 ADD . .
 
-ENV environment=brasilcap-properties-dev
 ENV JAVA_HOME=/usr/src/app/jre
 ENV PATH $PATH:/usr/src/app/jre
 ENV SONAR_RUNNER_HOME=/usr/src/app/sonar-scanner
