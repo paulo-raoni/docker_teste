@@ -3,7 +3,6 @@ var load = require('express-load');
 var bodyParser = require('body-parser');
 var Properties = require('../app/properties/PropertiesService');
 var MensagemDTO = require('../app/dto/MensagemDTO');
-var AWSXRay = require('aws-xray-sdk');
 var log4js = require('log4js');
 var logger = log4js.getLogger('[express]');
 
@@ -41,7 +40,7 @@ app.all('/', function(req, res, next) {
 app.use(function(error, req, res, next) {
 	if (error) {
 		res.status(400);
-		res.send(new MensagemDTO(1, 99, 1, 'Json com formato inválido!'));
+		res.send(new MensagemDTO(400, 1, 'Json com formato inválido!'));
 	} else {
 		next();
 	}
@@ -68,7 +67,6 @@ function initApp() {
 	});
 }
 
-AWSXRay.setDefaultName('gra-gravame');
 module.exports = function() {
 	new Properties().init((error, result) => {
 		if (result) {

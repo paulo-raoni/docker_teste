@@ -15,45 +15,40 @@ PropertiesService.prototype.init = function (callback) {
     if (!BUCKET) {
         throw new Error('environment not found');
     }
-    carregarProperties(listaChave, 0, function (erro, resultado) {
+    // carregarProperties(listaChave, 0, function (erro, resultado) {
+    //     global[listaChave[index].chave] = JSON.parse(resultado.Body)
 
-        if (erro) {
-            callback(erro, null);
-        } else { 
-            callback(null, resultado);
-        }
-
-    });
+    // });
 
 }
 
 function carregarProperties(listaChave, index, callback) {
-    if (resultado) {
+    // if (resultado) {
 
-        global[listaChave[index].chave] = JSON.parse(resultado.Body);
+    //     global[listaChave[index].chave] = JSON.parse(resultado.Body);
 
-        if (listaChave.length > ++index) {
+    //     if (listaChave.length > ++index) {
 
-            carregarProperties(listaChave, index, function (erro, resultado) {
-                if (resultado.index == listaChave.length) {
-                    callback(null, resultado);
+    //         carregarProperties(listaChave, index, function (erro, resultado) {
+    //             if (resultado.index == listaChave.length) {
+    //                 callback(null, resultado);
 
-                } else {
-                    callback(erro, null);
+    //             } else {
+    //                 callback(erro, null);
 
-                }
-            });
+    //             }
+    //         });
 
-        } else {
-            var ret = {}
-            ret.index = index;
-            ret.retorno = 'sucesso';
-            callback(null, ret);
-        }
+    //     } else {
+    //         var ret = {}
+    //         ret.index = index;
+    //         ret.retorno = 'sucesso';
+    //         callback(null, ret);
+    //     }
 
-    } else {
-        callback(erro, null);
-    }
+    // } else {
+    //     callback(erro, null);
+    // }
 
 }
 
