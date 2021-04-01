@@ -68,14 +68,7 @@ function initApp() {
 }
 
 module.exports = function() {
-	new Properties().init((error, result) => {
-		if (result) {
-			logger.info("*** Properties carregados...");
-			initApp();
-		} else {
-			logger.error('error: ', error);
-		}
-	});
+	initApp();
 
 	return app;
 };
