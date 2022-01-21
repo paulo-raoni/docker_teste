@@ -11,7 +11,7 @@
     "express": "~4.14.0",
     "express-load": "^1.1.15",
     "express-validator": "^3.1.2",
-    "log4js": "^1.1.1",
+    "log4js": "^6.4.0",
     "log4js-json-layout": "^2.1.0",
     "moment": "^2.18.1",
     "mysql": "^2.13.0",
