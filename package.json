@@ -6,9 +6,9 @@
   "private": true,
   "dependencies": {
     "DateValidator": "^1.0.5",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.20.1",
     "cookie-parser": "~1.4.3",
-    "express": "~4.14.0",
+    "express": "~4.18.2",
     "express-load": "^1.1.15",
     "express-validator": "^3.1.2",
     "log4js": "^1.1.1",
